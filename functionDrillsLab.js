@@ -74,18 +74,34 @@ greeting(Jake);
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
-
+let compareNums = (num1, num2) => {
+   if(num1 > num2){
+    return num1
+  } else if (num2 > num1){
+    return num2
+  } else {
+    return num1 && num2
+  }
+}
+// let compareNums = (num1, num2) => {
+//   return (num1 > num2 ? num1: num2)
+// }
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Create a function called add that takes in two parameters 
   Inside, convert the arguments to be numbers (just in case strings get sent in)
   The add function should RETURN the two parameters added together.
-  Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
+  Create a variable outside the function called 'sum' and set it equal to add invoked (called), 
+  passing in 2 arguments.
 */
 
-//CODE HERE
+function add(answer1, answer2){
+  answer1 = number(answer1)
+  answer2 = number(answer2)
+  return answer1 + answer2
+}
+let sum = add(8, 4);
 
 
 ////////////////// PROBLEM 7 ////////////////////
@@ -101,7 +117,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
 
 
 
@@ -116,7 +132,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -126,7 +142,7 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
-
+let exclaimThree = (str) => str.toUpperCase() + '!!!'
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -141,7 +157,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -154,7 +170,16 @@ function exclaimFour(str) {
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
+const nameCheck = (name) => {
+  if(name === 'Steven') {
+    return 'What is up Steven?'
+  } else if(name === 'Bryan'){
+    return 'Hey Bryan!'
+  } else{
+    return 'Cool name, ' + name
+  }
+}
+let nameGreeting = nameCheck('Ashley');
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -167,8 +192,18 @@ function exclaimFour(str) {
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
-
+const faveColorFinder = (color) => {
+  if(color === 'red'){
+    return 'red is a great color'
+  } else if(color === 'green'){
+    return 'green is a solid favorite color'
+  } else if(color === 'black'){
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder('black');
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -178,8 +213,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
-
+function printAllNames(namesArr){
+  for(i = 0; i < namesArr.length; i++){
+    console.log(namesArr)
+  }
+}
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -189,7 +228,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+const thatsOdd = (num) => {
+  if(num === % 2 == 0 ){
+    return "that's not odd!"
+  } else {
+    return 'that is odd indeed!'
+  }
+}
+let oddChecker = thatsOdd(7);
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -202,7 +248,7 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+
 
 
 ////////////////// PROBLEM 15 ////////////////////
