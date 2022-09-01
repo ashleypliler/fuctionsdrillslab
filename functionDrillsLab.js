@@ -11,7 +11,9 @@
   Call the function.
 */
 
-//CODE HERE
+function helloWorld () {
+  console.log('Hello World!');
+}
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -20,7 +22,9 @@
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
+let jsNinja = () => {
+  return 'I am a JavaScript ninja!'
+}
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -30,7 +34,13 @@
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+// let printName = (name) => {
+    //return
+// }
+function printName (name) {
+  console.log(name)
+}
+printName('Cameron');
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -43,7 +53,14 @@
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
+let greeting = name => {
+  return 'Hello, ${name}'
+}
+
+function greeting (name) {
+  console.log('Hello' ${name})
+}
+greeting(Jake);
 
 
 ////////////////// PROBLEM 5 ////////////////////
