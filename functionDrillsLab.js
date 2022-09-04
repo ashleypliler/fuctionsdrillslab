@@ -94,8 +94,8 @@ let compareNums = (num1, num2) => {
 */
 
 function add(answer1, answer2){
-  answer1 = number(answer1)
-  answer2 = number(answer2)
+  answer1 = Number(answer1)
+  answer2 = Number(answer2)
   return answer1 + answer2
 }
 let sum = add(8, 4);
@@ -247,7 +247,7 @@ let oddChecker = thatsOdd(5);
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-const bestMovie = (movietitle) => movietitle +  'is the best movie ever!'
+const bestMovie = (movietitle) => `${movietitle}is the best movie ever!`
 bestMovie('notting hill');
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -283,14 +283,23 @@ let loser = 'Glimmer'
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-const theEliminator = (contestants, loser) => {
+
+function theEliminator(contestants, loser) {
   for(i = 0; i < contestants.length; i++){
-    if(contestants.includes(loser)){
-      return contestants.splice(3,1)
-    }
+    if(contestants[i === loser])
+    contestants.splice([i],1)
   }
+  return contestants;
 }
-theEliminator(contestants, loser);
+
+// const theEliminator = (contestants, loser) => {
+//   for(i = 0; i < contestants.length; i++){
+//     if(contestants.includes(loser)){
+//       return contestants.splice(3,1)
+//     }
+//   }
+// }
+// theEliminator(contestants, loser);
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -358,7 +367,11 @@ let totalFrogs= frogs(95);
 
 const frogs2 = (gold) => {
   if(gold % 3 === 0){
-
+    return gold / 3
+  } else if((gold - 1 ) % 3 === 0){
+    return (gold - 1) / 3
+  } else {
+    return (gold - 2) / 3
   }
 }
 
@@ -374,9 +387,15 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 const arrNum = (numArr) => {
-  if(numArr.s)
+  let previousNum = numArr[i]
+ for( i =  1; i < numArr.length; i++){
+  if(numArr[i] <= previousNum){
+    return false
+  }
+ }
+    return true
 }
-
+let ascendingArr = arrNum(sampleArray);
 
 ////////////////// PROBLEM 22 ////////////////////
 
